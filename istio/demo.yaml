@@ -5,7 +5,7 @@ spec:
     pilot:
       resources:
         requests:
-          cpu: 250m
+          cpu: 1000m
           memory: 512Mi
     meshConfig:
       accessLogFile: /dev/stdout
