@@ -1,0 +1,16 @@
+apiVersion: sailoperator.io/v1
+kind: Istio
+spec:
+  values:
+    pilot:
+      resources:
+        requests:
+          cpu: 250m
+          memory: 512Mi
+    meshConfig:
+      accessLogFile: /dev/stdout
+      defaultConfig:
+        holdApplicationUntilProxyStarts: true
+        proxyMetadata:
+          ISTIO_META_DNS_AUTO_ALLOCATE: "true"
+          ISTIO_META_DNS_CAPTURE: "true"
